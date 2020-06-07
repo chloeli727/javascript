@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Lab 9</title>
+   <script src="lab9.js" type="text/javascript" defer></script>
+   <style>
+	#cost {
+		font-weight: bold;
+		font-size: 18px;
+		}
+		
+	table, tr, th, td {
+		border: 1px solid black;
+	}
+	
+</style>
+</head>
+<body>
+   <h1>CPSC 1045 Lab 9: Tea ordering system</h1>
+   <p>Tea
+   <select id="tea">
+	<option value="black">Black</option>
+	<option value="green">Green</option>
+	<option value="red">Red</option>
+</select></p>
+
+
+<fieldset style="width: 300px">
+ <legend>Select your toppings: </legend>
+<label>Toppings</label>
+
+<select id="toppings">
+	<option value="grassjelly">Grass Jelly</option>
+	<option value="coconut">Coconut</option>
+	<option value="peals">Peals</option>
+	<option value="mangostars">Mango Stars</option>
+</select><br>
+<button type="button" onclick="addToppings()">Add Topping</button>
+<button type="button" onclick="removeToppings()">Remove Topping</button>
+<br>
+<label>Current Toppings</label>
+<div id="displayTopp">
+</div>
+</fieldset>
+<br>
+<p>Would you like Milk Tea?
+<select id="milktea">
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+</select>
+
+
+
+<h1>Your Order</h1>
+<button type="button" onclick="addDrink()">Add Drink</button>
+<button type="button" onclick="removeDrink()">Remove Drink</button>
+<button type="button" onclick="resetOrder()">Reset Order</button>
+<br>
+<br>
+
+<table id="order">
+	<tr>
+		<th>#</th>
+		<th>Tea</th>
+		<th>Milk</th>
+		<th>Toppings</th>
+		<th>Cost</th>
+	</tr>
+</table>
+<p id="cost"></p>
+</body>
+
+</html>

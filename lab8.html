@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Lab 8</title>
+   <script src="lab8.js" type="text/javascript" defer></script>
+   <style>
+   .choice{
+	border: 1px solid black;
+	padding-left: 10px;
+	width: 500px;
+	}
+	
+#cost {
+	font-weight: bold;
+	font-size: 18px;
+	}
+</style>
+</head>
+<body>
+   <h1>CPSC 1045 Bubble Tea Menu</h1>
+   <p>Tea
+   <select id="tea">
+	<option value="black">Black</option>
+	<option value="green">Green</option>
+	<option value="red">Red</option>
+</select></p>
+
+
+<div class="choice">
+<p>Select your toppings: </p>
+Toppings
+<select id="toppings">
+	<option value="grassjelly">Grass Jelly</option>
+	<option value="coconut">Coconut</option>
+	<option value="peals">Peals</option>
+	<option value="mangostars">Mango Stars</option>
+</select><br>
+<button type="button" onclick="addToppings()">Add Topping</button>
+<button type="button" onclick="removeToppings()">Remove Topping</button>
+<p>Current toppings</p>
+<div id="displayTopp">
+</div>
+
+</div>
+
+<p>&nbsp;</p>
+<p>Would you like Milk Tea?
+<select id="milktea">
+	<option value="yes">Yes</option>
+	<option value="no">No</option>
+</select>
+<p><button type="button" onclick="calculatePrice()">Calculate Cost</button></p>
+<p id="cost"></p>
+</body>
+
+</html>
